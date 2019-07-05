@@ -12,12 +12,14 @@ body {
 
 .container {
   display: grid;
-  justify-content: center;
   width: 600px;
+  height: 300px;
   margin: 0 auto;
   margin-top: 300px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 .header {
@@ -25,16 +27,11 @@ body {
   text-align: center;
 }
 
-.wrapper {
-  padding: 17px 7px 7px 84px;
-}
-
 .spin {
   display: inline-block;
   position: relative;
   width: 64px;
   height: 64px;
-  margin: 10px 0 0 59px;
 }
 .spin div {
   position: absolute;
@@ -121,8 +118,8 @@ body {
   position: relative;
   width: 64px;
   height: 64px;
-  margin: 14px 61px;
 }
+
 .round div {
   position: absolute;
   top: 27px;
@@ -177,6 +174,7 @@ body {
   width: 35px;
   height: 35px;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .double-bounce .child {
@@ -249,8 +247,8 @@ body {
   position: relative;
   width: 75px;
   height: 100px;
-  margin: 0 0 -11px 84px;
 }
+
 .stair__bar {
   position: absolute;
   width: 10px;
