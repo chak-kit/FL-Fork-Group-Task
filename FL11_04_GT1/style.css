@@ -40,8 +40,8 @@ body {
   position: absolute;
   width: 5px;
   height: 5px;
-  background: #fff;
-  border-radius: 40%;
+  background:radial-gradient(60% 60%, #fff, rgb(255, 255, 255, 0.3));
+  border-radius:10%;
   animation: spin 1.2s linear infinite;
 }
 .spin div:nth-child(1) {
@@ -174,8 +174,8 @@ body {
 }
 
 .sk-double-bounce {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   position: relative;
 }
 
@@ -205,10 +205,10 @@ body {
 }
 
 .sk-chasing-dots {
-  width: 4em;
-  height: 4em;
+  width: 3.2em;
+  height: 3.2em;
   position: relative;
-  margin-left: -1.7vw;
+  margin-left: -1.2vw;
   text-align: center;
   animation: sk-chasing-dots-rotate 2s infinite linear;
 }
