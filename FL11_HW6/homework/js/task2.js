@@ -22,9 +22,4 @@ const isTriangle = (a, b, c) => {
   }
 }
 
-console.log(isTriangle(5, 5, 5));
-console.log(isTriangle(5, 5, 6));
-console.log(isTriangle(3, 4, 5));
-console.log(isTriangle(10, 2, 7));
-
 alert(isTriangle(a, b, c));
