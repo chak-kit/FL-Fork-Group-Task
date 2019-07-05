@@ -110,67 +110,80 @@ body {
 	height: 5px;
 	background-color: #fefefe;
 	border-radius: 50%;
+	transition: border-radius 1.2s;
 	animation: spin 1.2s linear infinite;
 }
 .dotted-spinner .spin-1 {
 	animation-delay: 0s;
 	top: 2px;
 	left: 25px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-2 {
 	animation-delay: 0.1s;
 	top: 5px;
 	right: 14px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-3 {
 	animation-delay: 0.2s;
 	top: 14px;
 	right: 5px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-4 {
 	animation-delay: 0.3s;
 	top: 25px;
 	right: 2px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-5 {
 	animation-delay: 0.4s;
 	bottom: 14px;
 	right: 5px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-6 {
 	animation-delay: 0.5s;
 	bottom: 5px;
 	right: 14px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-7 {
 	animation-delay: 0.6s;
 	bottom: 2px;
 	left: 25px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-8 {
 	animation-delay: 0.7s;
 	bottom: 5px;
 	left: 14px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-9 {
 	animation-delay: 0.8s;
 	bottom: 14px;
 	left: 5px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-10 {
 	animation-delay: 0.9s;
 	top: 25px;
 	left: 2px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-11 {
 	animation-delay: 1s;
 	top: 14px;
 	left: 5px;
+	border-radius: 35%;
 }
 .dotted-spinner .spin-12 {
 	animation-delay: 1.1s;
 	top: 5px;
 	left: 14px;
+	border-radius: 35%;
 }
 @keyframes spin {
 	0%, 20%, 60%, 100% {
