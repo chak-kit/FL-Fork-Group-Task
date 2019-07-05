@@ -173,13 +173,13 @@ body {
   }
 }
 
-.sk-double-bounce {
+.double-bounce {
   width: 35px;
   height: 35px;
   position: relative;
 }
 
-.sk-double-bounce .sk-child {
+.double-bounce .child {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -190,7 +190,7 @@ body {
   left: -10px;
   animation: sk-double-bounce 2s infinite ease-in-out;
 }
-.sk-double-bounce .sk-double-bounce-2 {
+.double-bounce .double-bounce-2 {
   animation-delay: -1s;
 }
 
