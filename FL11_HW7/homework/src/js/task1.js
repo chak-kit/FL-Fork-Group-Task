@@ -31,7 +31,7 @@ if (email === '' || email === null) {
         } else {
           let newPassword = prompt('re enter the new password');
           if (password === newPassword) {
-            alert('ou have successfully changed your password.');
+            alert('you have successfully changed your password.');
           } else {
             alert('You wrote the wrong password.');
           }
@@ -41,7 +41,7 @@ if (email === '' || email === null) {
       alert('you have failed the change');
     }
   } else {
-    alert('In other case, show “Wrong password');
+    alert('Wrong password');
   }
 } else {
   alert('I don’t know you');
