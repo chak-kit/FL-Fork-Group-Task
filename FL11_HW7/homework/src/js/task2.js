@@ -9,37 +9,39 @@ let win = 0;
 
 let keepOn = confirm('Do you want to play a game?');
 
-if (keepOn) {
+if (!keepOn) {
+  alert('You did not become a billionaire, but could');
+} else {
   while (keepOn) {
     let roundPrize = initialPrize;
     let rand = Math.floor(Math.random() * maxNum + Math.random());
     for (let i = 0; i < ROUNDS; i++) {
       console.log(rand);
-      let guess = prompt(`Guess num from 0 (included) and ${maxNum} (included) `);
-      
+      let guess = prompt(`Round ${i + 1}: guess the number from 0 to ${maxNum}`);
+
       if (rand === +guess) {
         win += roundPrize;
         keepOn = confirm(`Congratulation, you won! Your prize is: ${win}$. Do you want to continue?`);
-
-        if (!keepOn) {
-          alert(`Thank you for your participation. Your prize is: $${win}`);
-          let again = confirm('Do you want to play again?')
-          if (!again) {
-            alert(`Thank you for gambling, your win is $${win}`);
-          } else {
-            maxNum += increasor;
-          }
-        }
-      } else {
-        keepOn = false;
+        initialPrize *= DIVIDE_BY_TWO;
       }
-      roundPrize /= DIVIDE_BY_TWO;
 
     }
     keepOn = false;
+    if (!keepOn) {
+      alert(`Thank you for your participation. Your prize is: $${win}`);
+      let again = confirm('Do you want to play again?');
+      if (!again) {
+        alert(`Thank you for gambling, your win is $${win}`);
+      } else {
+        keepOn = true;
+      }
+      roundPrize /= DIVIDE_BY_TWO;
+    } else {
+      maxNum += increasor;
+      roundPrize = initialPrize;
+      rand = Math.floor(Math.random() * maxNum + Math.random());
+    }
   }
-} else {
-  console.log('You did not become a billionaire, but could');
 }
 
 
