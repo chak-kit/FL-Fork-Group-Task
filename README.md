@@ -22,6 +22,23 @@ Homework #6
 
 Homework #7
 
-- [Task #1: Check the email and change the password](https://aymkin.github.io/FL-11/FL11_HW6/homework/src/task1.html)
+- [Task #1: Check the email and change the password](https://aymkin.github.io/FL-11/FL11_HW7/homework/src/task1.html)
 
-- [Task #2: Guessing game](https://aymkin.github.io/FL-11/FL11_HW6/homework/src/task2.html)
+- [Task #2: Guessing game](https://aymkin.github.io/FL-11/FL11_HW7/homework/src/task2.html)
+
+
+Homework #8
+
+- [Task #1: isBigger](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/isBigger.js)
+
+- [Task #2: isSmaller](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/isSmaller.js)
+
+- [Task #3: getMin](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/getMin.js)
+
+- [Task #4: isInteger](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/isInteger.js)
+
+- [Task #5: reverseNumber](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/reverseNumber.js)
+
+- [Task #6: pipe](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/pipe.js)
+
+- [Task #6: formatTime](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/formatTime.js)
