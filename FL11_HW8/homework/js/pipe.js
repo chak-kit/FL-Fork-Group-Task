@@ -1,15 +1,9 @@
-const addOne = x => x + 1;
+// const addOne = x => x + 1;
 
-const pipe = (arg, ...functions) => {
-  console.log(functions);
+// const pipe = (arg, ...functions) => {
 
-  let reduceer = functions.reduce((accumulator, currentValue) => {
-  console.log(accumulator, currentValue);
-    return accumulator + currentValue;
-  });
 
-  console.log(reduceer);
-  return reduceer;
-}
+//   return 1;
+// }
 
-console.log(pipe(2, addOne, addOne, addOne));
+// console.log(pipe(5, addOne));
