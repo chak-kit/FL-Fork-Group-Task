@@ -142,3 +142,17 @@ const showFormattedDate = date => {
 }
 
 console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
+
+// 6. Write function, which returns Boolean value, is 
+// received string parameter can be converted to valid date.
+
+const canConvertToDate = date => {
+  let d = new Date(date);
+  if (JSON.stringify(d) !== 'null') {
+    return true;
+  }
+  return false;
+}
+
+console.log(canConvertToDate('2016-13-18T00:00:00'));
+console.log(canConvertToDate('2016-03-18T00:00:00'));
