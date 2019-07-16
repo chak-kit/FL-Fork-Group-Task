@@ -214,9 +214,9 @@ const getAmountOfAdultPeople = data => {
     console.log(data[i]['birthday']);
     let personBirthday = new Date(data[i]['birthday']);
     console.log((now - personBirthday) / magicNum.thousand / magicNum.sixty /
-    magicNum.sixty / magicNum.twentyFour/ magicNum.t365 >= magicNum.eighteen);
-    if ((now - personBirthday) / magicNum.thousand / magicNum.sixty / magicNum.sixty / 
-    magicNum.twentyFour / magicNum.t365 >= magicNum.eighteen) {
+      magicNum.sixty / magicNum.twentyFour / magicNum.t365 >= magicNum.eighteen);
+    if ((now - personBirthday) / magicNum.thousand / magicNum.sixty / magicNum.sixty /
+      magicNum.twentyFour / magicNum.t365 >= magicNum.eighteen) {
       older18 += 1;
     }
   }
@@ -227,12 +227,28 @@ console.log(getAmountOfAdultPeople(data));
 
 // 9. Write function, which returns array of keys of an object.
 
-const keys = obj => Object.keys(obj);
+const keys = obj => {
+  let keys = [];
+  for (let prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      keys.push(prop);
+    }
+  }
+  return keys;
+}
 
-console.log(keys(data[0]));
+console.log(keys(data[0]))
 
 // 10. Write function, which returns array of values of an object.
 
-const values = obj => Object.values(obj);
+const values = obj => {
+  let values = [];
+  for (let prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      values.push(obj[prop])
+    }
+  }
+  return values;
+};
 
 console.log(values(data[0]));
