@@ -97,7 +97,7 @@ console.log(filterArray([magicNum.two, magicNum.five, magicNum.eight], (el) => e
 
 const showFormattedDate = date => {
   let month = date.getMonth();
-  console.log(month);
+
   switch (month) {
     case 0:
       month = 'Jan';
@@ -148,10 +148,7 @@ console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
 
 const canConvertToDate = date => {
   let d = new Date(date);
-  if (JSON.stringify(d) !== 'null') {
-    return true;
-  }
-  return false;
+  return JSON.stringify(d) !== 'null';
 }
 
 console.log(canConvertToDate('2016-13-18T00:00:00'));
@@ -164,3 +161,72 @@ const daysBetween = (date1, date2) => {
 }
 
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
+
+// 8. Write function, which returns amount of people, who are over 18. Reuse function from task 4,7
+// getAmountOfAdultPeople(data) // returns 3;
+
+let data = [
+  {
+    '_id': '5b5e3168c6bf40f2c1235cd6',
+    'index': 0,
+    'birthday': '2016-03-18T00:00:00',
+    'eyeColor': 'green',
+    'name': 'Stein',
+    'favoriteFruit': 'apple'
+  },
+  {
+    '_id': '5b5e3168e328c0d72e4f27d8',
+    'index': 1,
+    'birthday': '1991-02-11T00:00:00',
+    'eyeColor': 'blue',
+    'name': 'Cortez',
+    'favoriteFruit': 'strawberry'
+  },
+  {
+    '_id': '5b5e3168cc79132b631c666a',
+    'index': 2,
+    'birthday': '1984-04-17T00:00:00',
+    'eyeColor': 'blue',
+    'name': 'Suzette',
+    'favoriteFruit': 'apple'
+  },
+  {
+    '_id': '5b5e31682093adcc6cd0dde5',
+    'index': 3,
+    'birthday': '1994-04-17T00:00:00',
+    'eyeColor': 'green',
+    'name': 'George',
+    'favoriteFruit': 'banana'
+  }
+];
+
+const getAmountOfAdultPeople = data => {
+  let now = new Date();
+  let older18 = 0;
+  console.log(now);
+
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i]['birthday']);
+    let personBirthday = new Date(data[i]['birthday']);
+    console.log((now - personBirthday) / 1000 / 60 / 60 / 24 / 365 >= 18);
+    if ((now - personBirthday) / 1000 / 60 / 60 / 24 / 365 >= 18) {
+    
+      older18 += 1;
+    }
+  }
+  return older18;
+}
+
+console.log(getAmountOfAdultPeople(data));
+
+// 9. Write function, which returns array of keys of an object.
+
+const keys = obj => Object.keys(obj);
+
+console.log(keys(data[0]));
+
+// 10. Write function, which returns array of values of an object.
+
+const values = obj => Object.values(obj);
+
+console.log(values(data[0]));
