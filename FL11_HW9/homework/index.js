@@ -8,7 +8,12 @@ let magicNum = {
   six: 6,
   seven: 7,
   eight: 8,
-  nine: 9
+  nine: 9,
+  eighteen: 18,
+  twentyFour: 24,
+  sixty: 60,
+  thousand: 1000,
+  t365: 365
 }
 
 // 0. Write function, which returns array of numbers from string parameter
@@ -157,7 +162,7 @@ console.log(canConvertToDate('2016-03-18T00:00:00'));
 // 7. Write function, which returns difference between two dates in days
 
 const daysBetween = (date1, date2) => {
-  return (date2 - date1) / 1000 / 60 / 60 / 24;
+  return (date2 - date1) / magicNum.thousand / magicNum.sixty / magicNum.sixty / magicNum.twentyFour;
 }
 
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
@@ -208,9 +213,10 @@ const getAmountOfAdultPeople = data => {
   for (let i = 0; i < data.length; i++) {
     console.log(data[i]['birthday']);
     let personBirthday = new Date(data[i]['birthday']);
-    console.log((now - personBirthday) / 1000 / 60 / 60 / 24 / 365 >= 18);
-    if ((now - personBirthday) / 1000 / 60 / 60 / 24 / 365 >= 18) {
-    
+    console.log((now - personBirthday) / magicNum.thousand / magicNum.sixty /
+    magicNum.sixty / magicNum.twentyFour/ magicNum.t365 >= magicNum.eighteen);
+    if ((now - personBirthday) / magicNum.thousand / magicNum.sixty / magicNum.sixty / 
+    magicNum.twentyFour / magicNum.t365 >= magicNum.eighteen) {
       older18 += 1;
     }
   }
