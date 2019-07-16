@@ -156,3 +156,11 @@ const canConvertToDate = date => {
 
 console.log(canConvertToDate('2016-13-18T00:00:00'));
 console.log(canConvertToDate('2016-03-18T00:00:00'));
+
+// 7. Write function, which returns difference between two dates in days
+
+const daysBetween = (date1, date2) => {
+  return (date2 - date1) / 1000 / 60 / 60 / 24;
+}
+
+console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
