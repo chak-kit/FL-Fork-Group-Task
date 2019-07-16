@@ -167,7 +167,8 @@ const daysBetween = (date1, date2) => {
 
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
 
-// 8. Write function, which returns amount of people, who are over 18. Reuse function from task 4,7
+// 8. Write function, which returns amount of people, who are over 18. 
+// Reuse function from task 4,7
 // getAmountOfAdultPeople(data) // returns 3;
 
 let data = [
@@ -208,15 +209,9 @@ let data = [
 const getAmountOfAdultPeople = data => {
   let now = new Date();
   let older18 = 0;
-  console.log(now);
-
   for (let i = 0; i < data.length; i++) {
-    console.log(data[i]['birthday']);
     let personBirthday = new Date(data[i]['birthday']);
-    console.log((now - personBirthday) / magicNum.thousand / magicNum.sixty /
-      magicNum.sixty / magicNum.twentyFour / magicNum.t365 >= magicNum.eighteen);
-    if ((now - personBirthday) / magicNum.thousand / magicNum.sixty / magicNum.sixty /
-      magicNum.twentyFour / magicNum.t365 >= magicNum.eighteen) {
+    if (daysBetween(personBirthday, now) / magicNum.t365 >= magicNum.eighteen) {
       older18 += 1;
     }
   }
