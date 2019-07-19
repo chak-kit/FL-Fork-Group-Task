@@ -1,33 +1,36 @@
 # FL-11
 
-The ropository is a part of registration in EPAM University Program FE Ukraine as a Registration confirmation
+The ropository is:
+- a part of registration in EPAM University Program FE Ukraine as a Registration confirmation
+- container for Home Works
+- kind a portfolio
 
-[Content](https://aymkin.github.io/FL-11/)
+## [Content](https://aymkin.github.io/FL-11/)
 
-[Homework #1](https://aymkin.github.io/FL-11/FL11_HW1/homework/index.html)
+## [Homework #1](https://aymkin.github.io/FL-11/FL11_HW1/homework/index.html)
 
-[Homework #2](https://aymkin.github.io/FL-11/FL11_HW2/homework/index.html)
+## [Homework #2](https://aymkin.github.io/FL-11/FL11_HW2/homework/index.html)
 
-[Homework #4](https://aymkin.github.io/FL-11/FL11_HW4/homework/index.html)
+## [Homework #4](https://aymkin.github.io/FL-11/FL11_HW4/homework/index.html)
 
-[Homework #5](https://aymkin.github.io/FL-11/FL11_HW5/homework/index.html)
+## [Homework #5](https://aymkin.github.io/FL-11/FL11_HW5/homework/index.html)
 
-Homework #6
+## Homework #6
 
 - [Task #1: is midpoint?](https://aymkin.github.io/FL-11/FL11_HW6/homework/task1.html)
 
 - [Task #2: is triangle?](https://aymkin.github.io/FL-11/FL11_HW6/homework/task2.html)
 
-[Group Task #1](https://aymkin.github.io/FL-11/FL11_04_GT1/)
+## **[Group Task #1](https://aymkin.github.io/FL-11/FL11_04_GT1/)**
 
-Homework #7
+## Homework #7
 
 - [Task #1: Check the email and change the password](https://aymkin.github.io/FL-11/FL11_HW7/homework/src/task1.html)
 
 - [Task #2: Guessing game](https://aymkin.github.io/FL-11/FL11_HW7/homework/src/task2.html)
 
 
-Homework #8
+## Homework #8
 
 - [Task #1: isBigger](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/isBigger.js)
 
@@ -43,4 +46,10 @@ Homework #8
 
 - [Task #6: formatTime](https://aymkin.github.io/FL-11/FL11_HW8/homework/js/formatTime.js)
 
-[Homework #9](https://aymkin.github.io/FL-11/FL11_HW9/homework/)
+## [Homework #9](https://aymkin.github.io/FL-11/FL11_HW9/homework/)
+
+## [Homework #10](https://aymkin.github.io/FL-11/FL11_HW10/homework/)
+
+## **[Group Task #2](https://aymkin.github.io/FL-11/FL11_04_GT2/)**
+
+## [Homework #11](https://aymkin.github.io/FL-11/FL11_HW11/homework/)
