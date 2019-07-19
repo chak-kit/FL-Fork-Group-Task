@@ -1,11 +1,12 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+// parallelogram by @SlavikSurminskiy 
+document.addEventListener("DOMContentLoaded", function (event) {
   let parallelogram = document.getElementById('parallelogram');
   let parallelogramSideA = document.getElementById('parallelogram-side-a');
   let parallelogramSideB = document.getElementById('parallelogram-side-b');
   let parallelogramAngle = document.getElementById('parallelogram-angle');
   let parallelogramArea = document.querySelector('#parallelogram-area span');
   let parallelogramHeight = document.querySelector('#parallelogram-height span');
-  
+
   function buildParallelogram() {
     let parSideA = parallelogramSideA.value;
     let parSideB = parallelogramSideB.value;
@@ -41,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     let parArea;
     let parHeight;
-    if(validFlags[0] & validFlags[1] &validFlags[2]) {
-      parArea = parSideA * parSideB * Math.sin(parAngle * Math.PI / 180);
-      parHeight = parSideB * Math.sin(parAngle * Math.PI / 180);
+    if (validFlags[0] & validFlags[1] & validFlags[2]) {
+      parArea = parSideA * parSideB * Math.sin(parAngle * Math.PI / 180).toFixed(2);
+      parHeight = parSideB * Math.sin(parAngle * Math.PI / 180).toFixed(2);
     } else {
       parArea = '-';
       parHeight = '-';
@@ -55,5 +56,57 @@ document.addEventListener("DOMContentLoaded", function(event) {
   parallelogramSideA.addEventListener('input', buildParallelogram);
   parallelogramSideB.addEventListener('input', buildParallelogram);
   parallelogramAngle.addEventListener('input', buildParallelogram);
-  
+
 });
+
+// rectangle by @aymkin
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  let rectangle = document.getElementById('rectangle');
+  let rectangleSideA = document.getElementById('rectangle-side-a');
+  let rectangleSideB = document.getElementById('rectangle-side-b');
+  let rectangleArea = document.querySelector('#rectangle-area span');
+  let rectangleHeight = document.querySelector('#rectangle-height span');
+
+  function buildRectangle() {
+    let recSideA = rectangleSideA.value;
+    let recSideB = rectangleSideB.value;
+
+    let validFlags = [false, false, false];
+    let defaultSettings = {
+      sideA: 100,
+      sideB: 50
+    }
+
+    if (recSideA != '') {
+      rectangle.style.width = recSideA + 'px';
+      validFlags[0] = true;
+    } else {
+      rectangle.style.width = defaultSettings.sideA + 'px';
+    }
+
+    if (recSideB != '') {
+      rectangle.style.height = recSideB + 'px';
+      validFlags[1] = true;
+    } else {
+      rectangle.style.height = defaultSettings.sideB + 'px';
+    }
+
+    let recArea;
+    let recHeight;
+    if (validFlags[0] & validFlags[1]) {
+      recArea = recSideA * recSideB;
+      recHeight = recSideB;
+    } else {
+      recArea = '-';
+      recHeight = '-';
+    }
+    rectangleArea.innerHTML = recArea;
+    rectangleHeight.innerHTML = recHeight;
+  }
+
+  rectangleSideA.addEventListener('input', buildRectangle);
+  rectangleSideB.addEventListener('input', buildRectangle);
+
+});
+
