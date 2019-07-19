@@ -1,53 +1,28 @@
-.wrapper {
-	position: relative;
-	top: 50px;
-	left: 50px;
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr 1fr;
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
-
-.parallelogram,
-.circle,
-.oval,
-.square,
-.rectangle {
-	background: transparent;
-	border: 5px solid skyblue;
-	margin-bottom: 50px; 
+.page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
 }
-
-.parallelogram {
-	width: 100px;
-	height: 50px;
-	transform: skew(-50deg);
+.geometric-figure {
+  display: flex;
 }
-
-.circle {
-  height: 100px;
-  width:  100px;
-  border-radius: 50%;
+.geometric-figure__shape-wrapper {
+  width: 40%;
 }
-
-.oval {
-  height: 50px;
+.geometric-figure__settings {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.shape {
+  background: red;
+  transition: all 0.1s ease-in-out;
+}
+.parallelogram__shape {
   width: 100px;
-  border-radius: 50%;
-}
-
-.square {
-  height: 100px;
-  width:  100px;
-}
-
-.rectangle {
   height: 50px;
-  width: 100px;
-}
-
-.triangle {
-	width: 0;
-	height: 0;
-	border-left: 0px solid transparent;
-	border-right: 100px solid transparent;
-	border-bottom: 100px solid skyblue;
 }

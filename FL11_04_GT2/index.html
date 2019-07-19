@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Figures: Group Task #2</title>
 	<link rel="stylesheet" href="style.css">
+	<title>FL-04</title>
 </head>
+
 <body>
-	<div class="wrapper">
-			<div class="parallelogram first"></div>
-			<div class="second">
-				<label for="">A: </label>
-				<input type="number" class="parallA">
-				<p>Area: <span></span></p>
+	<div class="page-wrapper">
+		<h2>Паралелограм</h2>
+		<section class="geometric-figure">
+			<div class="geometric-figure__shape-wrapper">
+				<div class="shape parallelogram__shape" id="parallelogram"></div>
 			</div>
-			<div class="third"></div>
-			<div class="fourth"></div>
-
-			<div class="circle first"></div>
-			<div class="second"></div>
-			<div class="third"></div>
-			<div class="fourth"></div>
-
-			<div class="oval first"></div>
-			<div class="second"></div>
-			<div class="third"></div>
-			<div class="fourth"></div>
-
-			<div class="square first"></div>
-			<div class="second"></div>
-			<div class="third"></div>
-			<div class="fourth"></div>
-
-			<div class="rectangle first"></div>
-			<div class="second"></div>
-			<div class="third"></div>
-			<div class="fourth"></div>
-
-			<div class="triangle first"></div>
-			<div class="second"></div>
-			<div class="third"></div>
-			<div class="fourth"></div>
+			<div class="geometric-figure__settings">
+				<label for="">A: <input type="number" name="" value="" id="parallelogram-side-a"></label>
+				<label for="">B: <input type="number" name="" value="" id="parallelogram-side-b"></label>
+				<label for="">Angel(top left corner): <input type="number" name="" value="" id="parallelogram-angle"></label>
+				<p id="parallelogram-area">Area: <span></span></p>
+				<p id="parallelogram-height">Height: <span></span></p>
+			</div>
+		</section>
 	</div>
 	<script src="script.js"></script>
 </body>
+
 </html>
