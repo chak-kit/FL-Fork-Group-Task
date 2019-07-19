@@ -9,6 +9,7 @@ html, body {
 }
 .geometric-figure {
   display: flex;
+	z-index: -1;
 }
 .geometric-figure__shape-wrapper {
   width: 40%;
@@ -26,4 +27,9 @@ html, body {
 .rectangle__shape {
   width: 100px;
   height: 50px;
+}
+.oval__shape {
+  width: 150px;
+  height: 150px;
+	border-radius: 50%;
 }

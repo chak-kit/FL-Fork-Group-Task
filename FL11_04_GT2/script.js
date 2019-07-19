@@ -110,3 +110,42 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 });
 
+// oval by @SlavikSurminskiy 
+// TODO needs improvement: scailing is too height
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  let oval = document.getElementById('oval');
+  let ovalHorizontalRadius = document.getElementById('oval-horizontal-radius');
+  let ovalVerticalRadius = document.getElementById('oval-vertical-radius');
+  let ovalArea = document.querySelector('#oval-area span');
+  let ovalLength = document.querySelector('#oval-length span');
+
+  function buildOval() {
+    let ovalHorRadius = ovalHorizontalRadius.value;
+    let ovalVerRadius = ovalVerticalRadius.value;
+    let validFlag = false;
+    
+    if (ovalHorRadius != '' & ovalVerRadius != '') {
+      oval.style.transform = `scaleX(${ovalHorRadius / ovalVerRadius})`;
+      validFlag = true;
+    }
+    let calcOvalArea;
+    let calcOvalLength;
+    
+    if (validFlag) {
+      calcOvalArea = Math.PI * ovalHorRadius * ovalVerRadius;
+      const x = Math.log(2) / Math.log(Math.PI / 2);
+      calcOvalLength = 4 * ((ovalHorRadius ** x + ovalVerRadius ** x) ** (1 / x));
+    } else {
+      calcOvalArea = '-';
+      calcOvalLength = '-';
+    }
+
+    ovalArea.innerHTML = calcOvalArea;
+    ovalLength.innerHTML = calcOvalLength;
+  }
+  ovalHorizontalRadius.addEventListener('input', buildOval);
+  ovalVerticalRadius.addEventListener('input', buildOval);
+});
+
+
