@@ -146,6 +146,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
   ovalHorizontalRadius.addEventListener('input', buildOval);
   ovalVerticalRadius.addEventListener('input', buildOval);
+
+  let block = document.getElementById('block_id');
+  let inputNumber = document.getElementById('block_num');
+  let diagonal = document.getElementsByClassName('diagonal')[0];
+  let area = document.getElementsByClassName('area')[0];
+
+  inputNumber.oninput = function (event) {
+    block.style.height = event.target.value + 'px';
+    block.style.width = event.target.value + 'px';
+    diagonal.innerHTML = event.target.value * Math.sqrt(2);
+    area.innerHTML = event.target.value * event.target.value;
+  };
+
+  let parallelogram2 = document.getElementById('parallelogram2');
+  let input_A = document.getElementById('block_A');
+  let input_B = document.getElementById('block_B');
+  let block_angle = document.getElementById('block_angle');
+  let parallelogramArea = document.getElementsByClassName('parallelogram_area')[0];
+  let parallelogram_height = document.getElementsByClassName('parallelogram_height')[0];
+
+  input_A.oninput = function (event) {
+    parallelogram2.style.width = event.target.value + 'px';
+    if (parallelogram_height.innerHTML === ' - ') {
+      parallelogramArea.innerHTML = ' - ';
+    } else {
+      parallelogramArea.innerHTML = event.target.value * parallelogram_height.innerHTML;
+    }
+    console.log(parallelogram_height.innerHTML)
+  };
+  input_B.oninput = function (event) {
+    parallelogram2.style.height = event.target.value + 'px';
+    parallelogram_height.innerHTML = event.target.value * Math.sin(block_angle.value * Math.PI / 180);
+    parallelogramArea.innerHTML = parallelogram_height.innerHTML * input_A.value;
+
+  };
+  block_angle.oninput = function (event) {
+    parallelogram2.style.transform = 'skew(' + event.target.value + 'deg)';
+    parallelogram_height.innerHTML = input_B.value * Math.sin(event.target.value * Math.PI / 180);
+    parallelogramArea.innerHTML = parallelogram_height.innerHTML * input_A.value;
+  }
+
 });
 
 

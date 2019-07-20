@@ -33,3 +33,23 @@ html, body {
   height: 150px;
 	border-radius: 50%;
 }
+
+.wrapper {
+  display: flex;
+  margin: 50px 0;
+}
+
+#block_id {
+  border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  margin-right: 260px;
+}
+
+#parallelogram2 {
+  width: 120px;
+  height: 60px;
+  transform: skew(20deg);
+  border: 3px solid black;
+  margin-right: 200px;
+}
